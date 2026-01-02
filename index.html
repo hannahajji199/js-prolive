@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<title>Hagaha Gargaarka Degdegga – Gubasho & Qandho</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+  background: #fff;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+/* HEADER */
+header h1 {
+  font-size: 26px;
+  margin: 0 0 4px;
+  
+}
+
+header p {
+  font-size: 15px;
+  color: #989696;
+  
+}
+header{
+    border-bottom:2px solid #dcdada ; 
+}
+/* CONTROLS */
+.controls {
+  display: flex;
+  gap: 6px;
+  margin: 14px;
+  
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+/* MAIN LAYOUT */
+.container-content {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.leftside-section {
+  width: 80%;
+  border-right: 2px solid rgb(197, 197, 197);
+  /* margin-left: -2rem; */
+  
+}
+
+/* CARDS */
+.card {
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-left: 10px;
+  
+}
+
+.card ul {
+  padding-left: 18px;
+  margin: 6px 0;
+}
+
+.card li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* WARNING */
+.warning {
+  background: #fdeaea;
+  border-left: 3px solid #d9534f;
+  padding: 6px;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* RIGHT SIDE */
+.layout {
+  width: 30%;
+  
+}
+
+.contact {
+  background: #ffffff;
+  
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.contact h3,
+.contact h4 {
+  font-size: 16px;
+ 
+}
+
+.contact p {
+  font-size: 14px;
+  margin: 4px 0;
+  line-height: 26px;
+}
+
+/* SEARCH HIGHLIGHT */
+mark {
+  background: #fff3a0;
+  padding: 0 2px;
+}
+
+</style>
+<body>
+<div class="container">
+<header>
+  <h1>Hagaha Gargaarka Degdegga</h1>
+  <p>tixraac fudud oo ku saabsan gargaarka degdegga ah ee xaaladaha caadiga ah </p>
+</header>
+
+<!-- SEARCH & FILTER -->
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="Ku qor astaamo (tusaale: madax xanuun)">
+  
+  <select id="category">
+    <option value="all">Dhammaan</option>
+    <option value="minor">Gubasho Yar</option>
+    <option value="severe">Gubasho Culus</option>
+    <option value="fever">Qandho</option>
+  </select>
+
+  <button id="cleanBtn">clear</button>
+</div>
+
+<div class="container-content">
+    <div class="leftside-section">
+  <!-- GUBASHO YAR -->
+  <section class="card minor">
+    <h2>Gubasho Yar (Minor Burn)</h2>
+    <ul>
+      <li>Casaan maqaarka ah</li>
+      <li>Xanuun yar</li>
+      <li>Finan yar yar</li>
+      <li>Ku shub biyo qabow 10–20 daqiiqo</li>
+      <li>Ku dabool faashad nadiif ah</li>
+    </ul>
+    <div class="warning">
+      ⚠️ Ha isticmaalin subag ama saliid.
+    </div>
+  </section>
+
+  <!-- GUBASHO CULUS -->
+  <section class="card severe">
+    <h2>Gubasho Culus (Severe Burn)</h2>
+    <ul>
+      <li>Xanuun daran</li>
+      <li>Maqaarka gubtay ama dillaacay</li>
+      <li>Dhiig ama dareere ka imaanaya</li>
+      <li>Wac ambalaas</li>
+      <li>Ha taaban boogta</li>
+      <li>Ku dabool maro nadiif ah</li>
+    </ul>
+    <div class="warning">
+      ⚠️ Gubashada wejiga ama gacmaha waa xaalad degdeg ah.
+    </div>
+  </section>
+
+  <!-- QANDHO -->
+  <section class="card fever">
+    <h2>Qandho (Fever)</h2>
+    <ul>
+      <li>Heerkul ka badan 38°C</li>
+      <li>Madax xanuun</li>
+      <li>Gariir ama dhidid</li>
+      <li>Daal iyo murqo xanuun</li>
+    </ul>
+    <ul>
+      <li>Cab biyo badan</li>
+      <li>Nasasho qaado</li>
+      <li>Isticmaal daawo qandho dejisa (haddii la oggol yahay)</li>
+    </ul>
+    <div class="warning">
+      ⚠️ Haddii qandho socoto 2+ maalmood, la xiriir dhakhtar.
+    </div>
+  </section>
+</div>
+
+<div class="layout">
+  <div class="contact">
+    <h3>Lambarrada Degdegga</h3>
+    <p><strong>Ambalaas – Muqdisho:</strong><br>611-000000</p>
+    <p><strong>Boolis – Soomaaliya:</strong><br>991</p>
+    <hr>
+    <h4>Calaamadaha</h4>
+    <p>Wax calaamad ah wali ma jiro.</p>
+  </div>
+</div>
+</div>
+</div>
+
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const category = document.getElementById("category");
+const cleanBtn = document.getElementById("cleanBtn");
+const cards = document.querySelectorAll(".card");
+
+/* ASTAAMAHA */
+const symptomsMap = {
+  minor: ["finan", "xanuun yar", "casaan", "gubasho yar"],
+  severe: ["xanuun daran", "maqaarka gubtay", "dhiig", "gubasho weyn", "gubasho culus"],
+  fever: ["qandho", "kulayl", "madax xanuun", "gariir", "dhidid"]
+};
+
+/* KEYWORD SEARCH + HIGHLIGHT */
+searchInput.addEventListener("input", () => {
+  const text = searchInput.value.toLowerCase().trim();
+
+  cards.forEach(card => {
+    // ka saar highlight hore
+    card.innerHTML = card.innerHTML.replace(/<mark>|<\/mark>/g, "");
+    card.style.display = "none";
+  });
+
+  if (text === "") {
+    cards.forEach(card => card.style.display = "block");
+    return;
+  }
+
+  let found = false;
+
+  for (let type in symptomsMap) {
+    symptomsMap[type].forEach(symptom => {
+      if (text.includes(symptom)) {
+        document.querySelectorAll("." + type).forEach(card => {
+          card.style.display = "block";
+
+          const regex = new RegExp(`(${symptom})`, "gi");
+          card.innerHTML = card.innerHTML.replace(regex, "<mark>$1</mark>");
+
+          found = true;
+        });
+      }
+    });
+  }
+
+  /* fallback search caadi ah */
+  if (!found) {
+    cards.forEach(card => {
+      const content = card.textContent.toLowerCase();
+      if (content.includes(text)) {
+        card.style.display = "block";
+        const regex = new RegExp(`(${text})`, "gi");
+        card.innerHTML = card.innerHTML.replace(regex, "<mark>$1</mark>");
+      }
+    });
+  }
+});
+
+/* FILTER */
+category.addEventListener("change", () => {
+  const value = category.value;
+  cards.forEach(card => {
+    card.style.display =
+      value === "all" || card.classList.contains(value)
+        ? "block"
+        : "none";
+  });
+});
+
+/* CLEAN */
+cleanBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  category.value = "all";
+  cards.forEach(card => {
+    card.style.display = "block";
+    card.innerHTML = card.innerHTML.replace(/<mark>|<\/mark>/g, "");
+  });
+});
+</script>
+
+</body>
+</html>
